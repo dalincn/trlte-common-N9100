@@ -1,0 +1,10 @@
+allow audioserver qmuxd_socket:dir search;
+allow audioserver self:socket create;
+allow audioserver qmuxd_socket:dir write;
+allow audioserver self:socket ioctl;
+allow audioserver qmuxd_socket:dir add_name;
+allow audioserver qmuxd_socket:sock_file create;
+allow audioserver qmuxd_socket:sock_file { setattr write };
+allow audioserver self:socket read;
+allow audioserver qmuxd_socket:dir remove_name;
+allow audioserver qmuxd:unix_stream_socket connectto;

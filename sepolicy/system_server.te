@@ -1,0 +1,15 @@
+allow system_server init:unix_stream_socket getopt;
+allow system_server time_daemon:unix_stream_socket connectto;
+allow system_server sensorhub_dev:chr_file r_file_perms;
+allow system_server touch_key_sysfs:file rw_file_perms;
+allow system_server touch_key_sysfs:dir rw_dir_perms;
+allow system_server io_device:chr_file rw_file_perms;
+allow system_server efs_file:dir r_dir_perms;
+allow system_server efs_file:file r_file_perms;
+allow system_server vibe_dev:file rw_file_perms;
+allow system_server lcd_dev:file rw_file_perms;
+allow system_server wifi_efs_file:file r_file_perms;
+allow system_server keypad_dev:file rw_file_perms;
+allow system_server unlabeled:file unlink;
+allow system_server sensors_efs_file:file { read open };
+allow system_server user_profile_data_file:dir read;

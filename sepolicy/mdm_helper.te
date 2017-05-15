@@ -1,0 +1,7 @@
+# Allow writes to kmsg
+allow mdm_helper kmsg_device:chr_file w_file_perms;
+
+allow mdm_helper self:capability dac_override;
+
+allow mdm_helper diag_device:chr_file read;
+allow mdm_helper diag_device:chr_file open;
